@@ -1,25 +1,25 @@
 class Repoweave < Formula
   desc "A cross-repo workspace manager"
   homepage "https://cwalv.github.io/repoweave/"
-  version "0.12.0"
+  version "0.12.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.12.0/repoweave-aarch64-apple-darwin.tar.xz"
-      sha256 "fb3b5fecb59d633054fe73803c0f3a6e20b9eabfaf2d35151a232cfd54d6ef5c"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.12.1/repoweave-aarch64-apple-darwin.tar.xz"
+      sha256 "f628e4f9a3c600f585047d25103f25c1bdbc261ccbfd9f99b3ef5daa887267d6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.12.0/repoweave-x86_64-apple-darwin.tar.xz"
-      sha256 "872947cf90927128baea762504c5e4541f7a56aec97d9a5c48d1ab9c99b38ced"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.12.1/repoweave-x86_64-apple-darwin.tar.xz"
+      sha256 "eb576f033e39057dd075846e5c3e6acaa32de7039da050d9e8b54d8ec43c10f0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.12.0/repoweave-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a219a34fdafead1f397f3f84f4bd62818e9f8cc3a3df07bf747850872a7fe2b4"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.12.1/repoweave-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6389c413f5784c780f8f8f2d0e1395945a204d8ef746ecc4fc7db05abba960c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.12.0/repoweave-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b3fbd69b19bea3e373ebc773f32b7dd36b01830bf8f4b8f6fd39e17dc2212e7f"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.12.1/repoweave-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d9723f5cee1691f0ac84cd6d6a7b2ff5a36e02999609478aa22616ce103fac53"
     end
   end
   license "MIT"
