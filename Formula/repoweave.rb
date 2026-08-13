@@ -1,25 +1,25 @@
 class Repoweave < Formula
   desc "A cross-repo workspace manager"
   homepage "https://cwalv.github.io/repoweave/"
-  version "0.17.0"
+  version "0.18.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.17.0/repoweave-aarch64-apple-darwin.tar.xz"
-      sha256 "25cc27ccf3a66938e477cf778c6be5d5b934bc606d220210521913dc0acaea81"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.18.0/repoweave-aarch64-apple-darwin.tar.xz"
+      sha256 "0ff49da34af05ee95d00385d6c7c8fb707df627aff0ff4407f1b3a06b747d776"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.17.0/repoweave-x86_64-apple-darwin.tar.xz"
-      sha256 "26e51cacb1e5a90869d19a7c7e179278e36603b9ccb0dc9fb5c563de7736da28"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.18.0/repoweave-x86_64-apple-darwin.tar.xz"
+      sha256 "6a964a3bea3e51342d704023b5b25a5645d41fdaef731bb2b82c25c83304137e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.17.0/repoweave-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cdca495fa285d20acb95c402ec847c27dd0a9d0bab4670556c900f710c3ee8e1"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.18.0/repoweave-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b8121279dd8546c0c412df500a1acf3e76ab1579c675d96e3f108f0295a3166c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cwalv/repoweave/releases/download/v0.17.0/repoweave-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a17aefa85a5da942ef7d0bce7aea2294785f5d7b696ba1f4d9ccf669a2a43dc7"
+      url "https://github.com/cwalv/repoweave/releases/download/v0.18.0/repoweave-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "474937aac62db1c3f6ea069543bf5fd524aeffb6d180678aea9d2fdb2e55c705"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Repoweave < Formula
   end
 
   def install
-    bin.install "generate-explain", "rwv" if OS.mac? && Hardware::CPU.arm?
-    bin.install "generate-explain", "rwv" if OS.mac? && Hardware::CPU.intel?
-    bin.install "generate-explain", "rwv" if OS.linux? && Hardware::CPU.arm?
-    bin.install "generate-explain", "rwv" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "generate-explain", "rwv"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "generate-explain", "rwv"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "generate-explain", "rwv"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "generate-explain", "rwv"
+    end
 
     install_binary_aliases!
 
